@@ -111,3 +111,6 @@ var swiper = new Swiper(".brand-slider", {
         },
     },
   });
+ function myFunction(){
+    document.getElementById("myForm").reset();
+  };
