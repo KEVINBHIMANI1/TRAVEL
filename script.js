@@ -12,7 +12,7 @@ let navbar = document.querySelector(".navbar");
 let viedoBtn = document.querySelectorAll(".vid-btn");
 
 
-window.onscroll= ()=>{
+window.onscroll = () => {
     searchBtn.classList.remove('fa-times');
     searchBar.classList.remove('active');
     menu.classList.remove('fa-times');
@@ -22,27 +22,29 @@ window.onscroll= ()=>{
 };
 
 
-searchBtn.addEventListener('click' , ()=>{
+
+
+searchBtn.addEventListener('click', () => {
     searchBtn.classList.toggle('fa-times');
     searchBar.classList.toggle('active');
 });
 
-menu.addEventListener('click' , ()=>{
+menu.addEventListener('click', () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
 });
 
 
-formBtn.addEventListener('click' , ()=>{
+formBtn.addEventListener('click', () => {
     loginform.classList.add('active');
 });
 
-formclose.addEventListener('click' , ()=>{
+formclose.addEventListener('click', () => {
     loginform.classList.remove('active');
 });
 
-viedoBtn.forEach(btn =>{
-    btn.addEventListener('click',()=>{
+viedoBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
         document.querySelector('.controls .active').classList.remove('active');
         btn.classList.add('active');
         let vid = btn.getAttribute('data-src');
@@ -71,36 +73,36 @@ viedoBtn.forEach(btn =>{
 //   });
 var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
-    loop:true,
+    loop: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
     },
-    breakpoints:{
+    breakpoints: {
         640: {
             slidesPerView: 1,
         },
-        768: { 
+        768: {
             slidesPerView: 2,
         },
         1024: {
             slidesPerView: 3,
         },
     },
-  });
+});
 
 var swiper = new Swiper(".brand-slider", {
     spaceBetween: 20,
-    loop:true,
+    loop: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
     },
-    breakpoints:{
+    breakpoints: {
         450: {
             slidesPerView: 2,
         },
-        768: { 
+        768: {
             slidesPerView: 3,
         },
         991: {
@@ -110,7 +112,8 @@ var swiper = new Swiper(".brand-slider", {
             slidesPerView: 5,
         },
     },
-  });
- function myFunction(){
+});
+
+function myFunction() {
     document.getElementById("myForm").reset();
-  };
+};
